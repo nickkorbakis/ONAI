@@ -1,11 +1,3 @@
 FROM airbyte/server:0.50.10
-ENV DATABASE_HOST=your-postgres-internal-hostname
-ENV DATABASE_PORT=5432
-ENV DATABASE_USER=postgres
-ENV DATABASE_PASSWORD=your-postgres-password
-ENV DATABASE_DB=airbyte
-ENV WEBAPP_URL=https://your-airbyte-service.railway.app
-ENV REDIS_HOST=your-redis-internal-hostname
-ENV REDIS_PORT=6379
 EXPOSE 8000
 CMD ["start"]
