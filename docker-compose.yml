@@ -1,0 +1,17 @@
+version: '3'
+services:
+  airbyte:
+    image: airbyte/airbyte:0.63.3
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_HOST=postgres.railway.internal
+      - DATABASE_PORT=5432
+      - DATABASE_USER=postgres
+      - DATABASE_PASSWORD=eEkmqcJswxzukkPEkqXKnvToKDIgqnRe
+      - DATABASE_DB=railway
+      - REDIS_HOST=redis.railway.internal
+      - REDIS_PORT=6379
+      - WEBAPP_URL=https://onai-production.up.railway.app
+      - AIRBYTE_VERSION=0.63.3
+      - LOG_LEVEL=INFO
